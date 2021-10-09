@@ -107,7 +107,10 @@ class App extends Component {
   //our React Code goes in here!
   render() {
     return (
-      <div>
+      <div className="App" style={{ position: 'relative' }}>
+        <div style={{ position: 'absolute' }}>
+          <ParticleSettings />
+        </div>
         <Navbar account={this.state.account} />
         <div className="container-fluid mt-5">
           <div className="row">
@@ -118,7 +121,7 @@ class App extends Component {
             >
               <div>
                 {this.state.loading ? (
-                  <p id="loader" className="text-center" style={{ margin: '30px' }}>
+                  <p id="loader" className="text-center" style={{ margin: '30px', color: 'white' }}>
                     LOADING PLEASE...
                   </p>
                 ) : (
